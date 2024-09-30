@@ -10,5 +10,9 @@ public class DeathScript : MonoBehaviour
         {
             transform.position = new Vector3((float)-16.21, 8.43f, 0 );
         }
+        if (other.gameObject.tag == "Enemy")
+        {
+            transform.position = new Vector3((float)-16.21, 8.43f, 0);
+        }
     }
 }
