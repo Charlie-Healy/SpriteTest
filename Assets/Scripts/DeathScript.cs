@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DeathScript : MonoBehaviour
@@ -8,11 +9,12 @@ public class DeathScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Respawn")
         {
-            transform.position = new Vector3((float)-16.21, 8.43f, 0 );
+            SceneManager.LoadScene("SampleScene");
         }
         if (other.gameObject.tag == "Enemy")
         {
-            transform.position = new Vector3((float)-16.21, 8.43f, 0);
+            SceneManager.LoadScene("SampleScene");
         }
+        
     }
 }

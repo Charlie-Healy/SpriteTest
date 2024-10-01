@@ -10,12 +10,12 @@ public class CoinCounter : MonoBehaviour
     public TMP_Text coinText;
     public int currentCoins = 0;
 
-    void Awake()
+    public void Awake()
     {
         instance = this;
     }
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         coinText.text = "COINS: " + currentCoins.ToString();
     }
@@ -26,7 +26,7 @@ public class CoinCounter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
     }

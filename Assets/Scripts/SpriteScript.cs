@@ -15,10 +15,13 @@ public class SpriteScript : MonoBehaviour
     //float speed
     float speed;
 
+    Helper helper;
+
 
 
     void Start()
     {
+        helper = gameObject.AddComponent<Helper>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
@@ -29,6 +32,12 @@ public class SpriteScript : MonoBehaviour
     }
    void Update()
     {
+        if (Input.GetKey("h") == true)
+        {
+            helper.Test();
+            helper.Flip(true);
+        }
+
         MoveSprite();
         DoJump();
         DoLand();
